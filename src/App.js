@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CustomInput from "./components/custom-input/custom-input.component";
 import "./App.css";
 
 const defaultActionData = {
@@ -80,7 +81,7 @@ function App() {
               </div>
               <div className="input-box">
                 <img src="/imgs/icon-dollar.svg" alt="icon" />
-                <input type="number" name="bill" value={bill.value} onChange={handleChange} placeholder="0" className={bill.error ? "input-error" : ""} />
+                <CustomInput type="number" name="bill" value={bill.value} onChange={handleChange} placeholder="0" error={bill.error} />
               </div>
             </div>
 
@@ -108,7 +109,7 @@ function App() {
                 </div>
 
                 <div className="tip-grid-item">
-                  <input type="number" name="tip-custom" placeholder="Custom" value={customTip} onChange={changeTip} />
+                  <CustomInput type="number" name="tip-custom" placeholder="Custom" value={customTip} onChange={changeTip} />
                 </div>
               </div>
             </div>
@@ -120,7 +121,7 @@ function App() {
               </div>
               <div className="input-box">
                 <img src="/imgs/icon-person.svg" alt="icon" />
-                <input type="number" name="people" value={people.value} onChange={handleChange} className={people.error ? "input-error" : ""} placeholder="0" />
+                <CustomInput type="number" name="people" value={people.value} onChange={handleChange} error={people.error} placeholder="0" />
               </div>
             </div>
           </div>

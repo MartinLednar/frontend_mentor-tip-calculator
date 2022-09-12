@@ -1,0 +1,36 @@
+/* Hide arrows in input type number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  padding: 5px 18px;
+  color: var(--dark);
+  background-color: var(--very-light-grayish);
+  font-size: 25px;
+  font-family: inherit;
+  text-align: right;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+input:focus {
+  border: 2px solid var(--primary);
+}
+
+input.input-error:focus {
+  border: 2px solid red;
+}
+
+.input-error {
+  border: 2px solid red;
+}

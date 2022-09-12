@@ -1,6 +1,5 @@
 import "./custom-input.styles.scss";
 
+const CustomInput = ({ error, ...otherProps }) => <input className={error ? "input-error" : ""} {...otherProps} />;
 
-const CustomInput = ({error...otherProps}) => (
-    <input className={error ? "input-error" : ""} {...otherProps}/>
-)
+export default CustomInput;
